@@ -20,6 +20,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        buildConfigField("String", "API_KEY", "\"${property("API_KEY")}\"")
     }
 
     buildTypes {
@@ -39,6 +40,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
     composeOptions {
