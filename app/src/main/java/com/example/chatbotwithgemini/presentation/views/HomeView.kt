@@ -11,13 +11,15 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.chatbotwithgemini.presentation.composables.ChatContent
 import com.example.chatbotwithgemini.presentation.composables.MessageInput
 import com.example.chatbotwithgemini.presentation.composables.SetTitle
 import com.example.chatbotwithgemini.presentation.theme.backColor
+import com.example.chatbotwithgemini.presentation.viewmodel.GeminiViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeView(){
+fun HomeView(viewModel: GeminiViewModel){
     Scaffold(
         topBar = {
             TopAppBar(
@@ -35,8 +37,9 @@ fun HomeView(){
                 .padding(paddingValues)
                 .background(backColor)
         ) {
+            ChatContent(modifier = Modifier.weight(1f), viewModel)
             MessageInput {
-
+                viewModel.sendMessage(it)
             }
         }
     }

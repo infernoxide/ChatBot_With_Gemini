@@ -20,16 +20,16 @@ import com.example.chatbotwithgemini.domain.model.MessageModel
 
 @Composable
 fun GlobeMessage(messageModel: MessageModel) {
-    val roleModel = messageModel.role == Constants.MODEL
+    val roleModel = messageModel.role == Constants.ROLE_MODEL
 
     Row(verticalAlignment = Alignment.CenterVertically) {
         Box(modifier = Modifier.fillMaxWidth()) {
             Box(
                 modifier = Modifier
                     .align(if (roleModel) Alignment.BottomStart else Alignment.BottomEnd)
-                    .padding(dimensionResource(R.dimen.size_10dp))
                     .clip(RoundedCornerShape(48f))
                     .background(if (roleModel) Color.Black else Color.DarkGray)
+                    .padding(dimensionResource(R.dimen.size_10dp))
             ){
                 Text(text = messageModel.message, fontWeight = FontWeight.Bold, color = Color.White)
             }
