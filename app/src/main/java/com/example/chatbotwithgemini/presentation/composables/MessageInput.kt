@@ -43,8 +43,10 @@ fun MessageInput(onClick:(String)->Unit){
         )
         IconButton(
             onClick = {
-                onClick(message)
-                message=""
+                if (message.isNotBlank()) {
+                    onClick(message.trim())
+                    message=""
+                }
             }) {
             Icon(imageVector = Icons.AutoMirrored.Default.Send, contentDescription = stringResource(R.string.send))
         }

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ChatBot With Gemini</string>
+    <string name="home_title">Pregúntale a Gemini</string>
     <string name="write_something">Escribe algo...</string>
     <string name="send">Enviar</string>
+    <string name="delete">Eliminar</string>
 </resources>

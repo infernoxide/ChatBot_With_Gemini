@@ -9,5 +9,5 @@ import com.example.chatbotwithgemini.R
 
 @Composable
 fun SetTitle(){
-    Text(text = stringResource(R.string.app_name), fontWeight = FontWeight.Bold, color = Color.White)
+    Text(text = stringResource(R.string.home_title), fontWeight = FontWeight.Bold, color = Color.White)
 }

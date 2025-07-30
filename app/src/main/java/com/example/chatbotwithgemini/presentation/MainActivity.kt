@@ -1,4 +1,4 @@
-package com.example.chatbotwithgemini
+package com.example.chatbotwithgemini.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
